@@ -66,6 +66,15 @@ class RecordingViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.navigationBar.isHidden = true
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopRecording()
+        recordingURL = nil
+        lblTimer.text = "00:00"
+        player?.stop()
+        recorder?.stop()
+    }
 }
 
 // MARK: -
@@ -115,6 +124,7 @@ extension RecordingViewController {
             recordingWaveView.configuration = recordingWaveView.configuration.with(
                 style: Waveform.Style.striped(.init(color: #colorLiteral(red: 0.2117647059, green: 0.2235294118, blue: 0.2431372549, alpha: 0.95), width: 3, spacing: 3))
             )
+            recordingWaveView.transform = CGAffineTransform(scaleX: 1, y: 1)
             startRecording()
             currentState = .recording
             btnPlayPause.setImage(UIImage(named: "ic_recordingStop"), for: .normal)
@@ -129,9 +139,11 @@ extension RecordingViewController {
                 stopRecording()
             }
             recordingWaveView.reset()
+            recordingWaveView.transform = CGAffineTransform(scaleX: 1, y: 1)
             recordingWaveView.configuration = recordingWaveView.configuration.with(
                 style: Waveform.Style.striped(.init(color: #colorLiteral(red: 0.7098039216, green: 0.6980392157, blue: 1, alpha: 1), width: 3, spacing: 3))
             )
+            recordingWaveView.transform = CGAffineTransform(scaleX: -1, y: 1)
             startPlayback()
             currentState = .playing
             btnPlayPause.setImage(UIImage(named: "ic_pause"), for: .normal)
@@ -159,6 +171,7 @@ extension RecordingViewController {
         recordingWaveView.configuration = recordingWaveView.configuration.with(
             style: Waveform.Style.striped(.init(color: #colorLiteral(red: 0.2117647059, green: 0.2235294118, blue: 0.2431372549, alpha: 0.95), width: 3, spacing: 3))
         )
+        recordingWaveView.transform = CGAffineTransform(scaleX: 1, y: 1)
         startRecording()
         stopRecording()
         
