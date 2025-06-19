@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice Carter",
+      "profilePic": "Face6",
+      "age": 27,
+      "question": "What is your most favorite childhood memory?",
+      "isLocked": true
+    },
+    {
+      "id": 2,
+      "name": "Ben Thompson",
+      "profilePic": "Face2",
+      "age": 34,
+      "question": "What is the most important quality in friendships to you?",
+      "isLocked": true
+    },
+    {
+      "id": 3,
+      "name": "Clara Nguyen",
+      "profilePic": "Face3",
+      "age": 22,
+      "question": "If you could choose to have one superpower, what would it be?",
+      "isLocked": true
+    },
+    {
+      "id": 4,
+      "name": "David Patel",
+      "profilePic": "Face4",
+      "age": 30,
+      "question": "What is the most important quality in friendships to you?",
+      "isLocked": true
+    },
+    {
+      "id": 5,
+      "name": "Ella Martinez",
+      "profilePic": "Face5",
+      "age": 25,
+      "question": "What is your most favorite childhood memory?",
+      "isLocked": true
+    }
+  ]
+}
