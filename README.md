@@ -27,3 +27,9 @@ EchoChat is an iOS app that enables users to record voice messages, associate th
 
 * DSWaveformImage for live waveform
 
+## Requirements
+
+* xcode 16+
+* iOS 15+
+
+
