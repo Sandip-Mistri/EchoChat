@@ -16,6 +16,7 @@ EchoChat is an iOS app that enables users to record voice messages, associate th
 ## 📲 How to Use
 
 * Launch the app
+* Tap on the Profile Tab
 * Tap on a specific chat card
 * Tap the record button to start recording
 * Tap the same button again to pause the recording
